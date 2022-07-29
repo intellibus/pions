@@ -39,7 +39,7 @@ npm install pions
 Read more about the [Design](https://github.com/intellibus/pions/blob/main/DESIGN.md) behind `pions` here.
 
 ```typescript
-import { mapKeysForValues } from 'pions';
+import { reduceOverValues } from 'pions';
 
 const data = {
   'Group 1': [1,2,3,4,...],
@@ -47,9 +47,11 @@ const data = {
   'Group 3': [1,4,9,16,...],
 }
 
-const counts = mapKeysForValues(data, ({ value }) => value.length)
-
+const counts = reduceOverValues(data, ({ value }) => value.length)
 // { 'Group 1': 50, 'Group 2': 15, 'Group 3': 32 }
+
+const sums = reduceOverValues(data, ({ aggregate, value }) => aggregate + value)
+// { 'Group 1': 1275, 'Group 2': 1596, 'Group 3': 11440 }
 ```
 
 ## Documentation 🛰
