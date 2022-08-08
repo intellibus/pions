@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "pions",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Fundamental Building Block Functions",
   "author": "Intellibus Labs <labs@intellibus.com> (https://intellibus.dev/)",
   "license": "MIT",
